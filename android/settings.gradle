@@ -1,0 +1,3 @@
+rootProject.name = 'weatherLocator'
+
+include ':app'
