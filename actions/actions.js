@@ -10,18 +10,18 @@ export function getWeather(zip) {
       type: FETCHING_DATA,
       isFetching: true
     });
-      let getMikeNaked = getWeatherData(zip);
-      if (getMikeNaked) {
+      let getCurrentWeather = getWeatherData(zip);
+      if (getCurrentWeather) {
         dispatch({
           type: FETCHING_DATA_SUCCESS,
-          payload: getMikeNaked
+          payload: getCurrentWeather
       })
     }
   }
 }
 
 function getWeatherData (zip) {
-  let url = "http://api.openweathermap.org/data/2.5/weather?zip=" + zip + "&appid=63a6f4c343335f65e9803ad48c03abf6&units=imperial";
+  let url = "http://api.openweathermap.org/data/2.5/weather?zip=" + zip + "&appid=***API KEY GOES HERE***&units=imperial";
   fetch(url)
     .then(response => response.json())
     .then((response) => {
